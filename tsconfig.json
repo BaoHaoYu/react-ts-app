@@ -1,0 +1,23 @@
+{
+  "extends": "./config-ts/tsconfig-commom.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "baseUrl": ".",
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "src",
+    "webpack-ts",
+    "config-ts",
+    "gulp-ts",
+    "gulpfile.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "__build__"
+  ]
+}

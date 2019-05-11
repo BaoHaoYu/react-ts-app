@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-standard"
+  ],
+  "rules": {
+    "object-literal-sort-keys": false
+  },
+  "exclude": [
+    "node_modlues",
+    "dist"
+  ]
+}

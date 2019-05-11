@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "src": [
+        "./src"
+      ]
+    }
+  }
+}
