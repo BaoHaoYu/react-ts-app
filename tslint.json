@@ -5,7 +5,8 @@
     "tslint-config-standard"
   ],
   "rules": {
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "no-console": false
   },
   "exclude": [
     "node_modlues",
