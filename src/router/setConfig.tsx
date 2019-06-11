@@ -2,15 +2,7 @@ import * as React from 'react'
 import { Route, RouteProps } from 'react-router-dom'
 import asyncLoad, { IAsyncComponent } from '../components/async-page'
 
-export interface IRouteItem extends RouteProps {
-  /**
-   * RouteProps
-   */
-  route?: RouteProps,
-  /**
-   * 异步组建
-   */
-  async?: IAsyncComponent
+export interface IRouteItem extends RouteProps,IAsyncComponent {
   /**
    * 子路由数据
    */
@@ -30,19 +22,22 @@ function setConfig (p: IRouteItem[]) {
     const _list: any[] = []
     deepChildren.map((item: IRouteItem) => {
       keyIndex = keyIndex + 1
-      if (item.route) {
-        const component = item.async ? asyncLoad({
-          ...item.async,
-          children: item.children && _deep(item.children)
-        }) : item.component
-        _list.push(
-          <Route
-            {...item.route}
-            key={keyIndex + ''}
-            component={component}
-          />
-        )
-      }
+      const component = item.load ? asyncLoad({
+        load: item.load,
+        children: item.children && _deep(item.children)
+      }) : item.component
+      _list.push(
+        <Route
+          path={item.path}
+          exact={item.exact}
+          sensitive={item.sensitive}
+          strict={item.strict}
+          location={item.location}
+          render={item.render}
+          key={keyIndex + ''}
+          component={component}
+        />
+      )
     })
     return _list
   }

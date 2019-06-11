@@ -7,16 +7,16 @@ import setConfig, { IRouteItem } from './setConfig'
 // 路由配置
 const config: IRouteItem[] = [
   {
-    route: { path: '/' },
-    async: { load: bundle.pageMain },
+    path: '/',
+    load: bundle.pageMain,
     children: [
       {
-        route: { path: '/page1' },
-        async: { load: bundle.page1 }
+        path: '/page1',
+        load: bundle.page1
       },
       {
-        route: { path: '/page2' },
-        async: { load: bundle.page2 }
+        path: '/page2',
+        load: bundle.page2
       }
     ]
   }

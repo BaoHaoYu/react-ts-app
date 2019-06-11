@@ -14,10 +14,6 @@ export interface IAsyncComponent {
    * 子路由
    */
   children?: any,
-  /**
-   * 是否异步，默认true
-   */
-  async?: boolean
 }
 
 /**
