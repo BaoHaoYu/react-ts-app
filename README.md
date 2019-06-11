@@ -52,10 +52,10 @@ Add the following code to the corresponding
 ```javascript
 let map = null
 if (result.map) {
-  Map = result.map.toJSON()
-  Map.sources = map.sources.map((src) => 'file:///' + src.replace(/\\/g,'/'))
+  map = result.map.toJSON()
+  map.sources = map.sources.map((src) => 'file:///' + src.replace(/\\/g,'/'))
 }
-const moduleCode = `// Module\nexports.push([module.id, ${cssAsString}, ""${result.map ? `,${JSON.stringify(map)}` : ''}]);\ n\n`;
+const moduleCode = `// Module\nexports.push([module.id, ${cssAsString}, ""${result.map ? `,${JSON.stringify(map)}` : ''}]);\n\n`;
 ```
 
 Modify the location css by chrome, then modify the file, this modification will be saved locally  
