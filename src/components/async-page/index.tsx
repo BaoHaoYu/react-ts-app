@@ -1,10 +1,4 @@
-import { defaultTo } from 'lodash-es'
 import * as React from 'react'
-import dispatch from 'src/util/decorators/addDispatch'
-
-interface IProps {
-  dispatch: any
-}
 
 /**
  * 异步方法加载组件
@@ -31,36 +25,14 @@ export interface IAsyncComponent {
  * @param {IAsyncComponent} p
  */
 export default function asyncPage (p: IAsyncComponent) {
-  const async = defaultTo(p.async, true)
-
-  class AsyncComponent extends React.Component<IProps> {
-    public static displayName?: string = ''
-
-    public state: { Component?: React.ComponentType<any> } = {
-      Component: async ? undefined : p.load as React.ComponentType<any>
-    }
-
-    public async componentWillMount () {
-      const { Component } = this.state
-      if (!Component) {
-        const PageComponent = await (p.load as loadAsync)()
-        if (this && this.setState) {
-          AsyncComponent.displayName = PageComponent.default.displayName
-          this.setState({ Component: PageComponent.default })
-        }
-      }
-    }
-
-    public render () {
-      const { Component } = this.state
-      if (!Component) return ''
-      return (
-          <Component {...this.props} >
-            {p.children}
-          </Component>
-      )
-    }
+  return function MyComponent (): any {
+    const PageComponent = React.lazy(p.load as loadAsync)
+    return (
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <PageComponent>
+          {p.children}
+        </PageComponent>
+      </React.Suspense>
+    )
   }
-
-  return dispatch(AsyncComponent)
 }

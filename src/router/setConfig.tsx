@@ -10,7 +10,7 @@ export interface IRouteItem extends RouteProps {
   /**
    * 异步组建
    */
-  async: IAsyncComponent
+  async?: IAsyncComponent
   /**
    * 子路由数据
    */
@@ -31,16 +31,16 @@ function setConfig (p: IRouteItem[]) {
     deepChildren.map((item: IRouteItem) => {
       keyIndex = keyIndex + 1
       if (item.route) {
-        const component = asyncLoad({
+        const component = item.async ? asyncLoad({
           ...item.async,
           children: item.children && _deep(item.children)
-        })
+        }) : item.component
         _list.push(
-            <Route
-                {...item.route}
-                key={keyIndex}
-                component={component}
-            />
+          <Route
+            {...item.route}
+            key={keyIndex + ''}
+            component={component}
+          />
         )
       }
     })

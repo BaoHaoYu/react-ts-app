@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-
 class Page1 extends React.Component<{ dispatch: any }> {
+
   public render () {
     return (
         <div>

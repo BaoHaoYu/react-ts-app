@@ -4,7 +4,8 @@
     "devSrc": "set NODE_ENV=development&& webpack --config ./webpack-ts/webpack.src.config.ts",
     "devServer": "set NODE_ENV=development&& webpack-dev-server --config ./webpack-ts/webpack.server.config.ts --hot",
     "sprites": "set NODE_ENV=production&& gulp sprites",
-    "src": "set NODE_ENV=production&& webpack --config ./webpack-ts/webpack.src.config.ts"
+    "src": "set NODE_ENV=production&& webpack --config ./webpack-ts/webpack.src.config.ts",
+    "tslint":"tslint --fix src/**/*{.ts,.tsx}"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
@@ -29,8 +30,8 @@
     "@types/merge-stream": "^1.1.2",
     "@types/node": "^10.12.12",
     "@types/nunjucks": "^3.1.0",
-    "@types/react": "16.4.18",
-    "@types/react-dom": "^16.0.7",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^6.0.9",
     "@types/react-router-dom": "^4.3.1",
     "@types/redux-actions": "^2.3.0",
@@ -94,8 +95,8 @@
     "history": "^4.7.2",
     "immutable": "^3.8.1",
     "lodash-es": "^4.17.11",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-redux": "^5.0.6",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
