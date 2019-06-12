@@ -1,4 +1,3 @@
-import autoprefixer from 'autoprefixer'
 import { ICssLoaderOpts } from 'css-loader'
 import precss from 'precss'
 import webpack from 'webpack'
@@ -29,8 +28,7 @@ export default function cssModules (p: { loader: string, sourceMap: boolean }):
         sourceMap: p.sourceMap,
         plugins () {
           return [
-            precss,
-            autoprefixer({ browsers: 'last 2 versions' })
+            precss
           ]
         }
       }
