@@ -11,7 +11,7 @@ import rules from './config/rules'
 
 const webpackConfig: webpack.Configuration & { devServer: devserver.Configuration } = {
   entry: {
-    main: ['./src/index']
+    main: ['./src/app/index']
   },
 
   devServer: {

@@ -2,7 +2,7 @@ import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { createHashHistory } from 'history'
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
-import log from 'src/util/middleware/log'
+import log from 'src/app/util/middleware/log'
 import reducer from '../router/reducer'
 
 const middle = [thunk, log]

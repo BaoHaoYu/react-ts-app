@@ -1,6 +1,6 @@
 import { applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import log from 'src/util/middleware/log'
+import log from 'src/app/util/middleware/log'
 
 const middle = [thunk, log]
 let compose1: any

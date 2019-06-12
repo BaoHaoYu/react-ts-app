@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Route, RouteProps } from 'react-router-dom'
-import dispatch, { IDispatchProps } from 'src/util/decorators/addDispatch'
+import dispatch, { IDispatchProps } from 'src/app/util/decorators/addDispatch'
 
 interface IAsyncRouteProps {
   load: any

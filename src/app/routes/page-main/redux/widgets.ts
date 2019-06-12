@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable'
 import { createAction, handleActions } from 'redux-actions'
-import { addReducers } from 'src/store'
+import { addReducers } from 'src/app/store'
 
 export const PAGE_NAEM = '页面主体'
 export const PAGE_HASH = 'PAGE-MAIN'

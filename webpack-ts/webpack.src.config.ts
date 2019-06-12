@@ -9,7 +9,7 @@ import rules from './config/rules'
 
 const webpackConfig: webpack.Configuration = {
   entry: {
-    main: ['./src/index.tsx']
+    main: ['./src/app/index.tsx']
   },
   mode: config.isProduction ? 'production' : 'development',
   resolve: {

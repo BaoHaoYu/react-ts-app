@@ -12,7 +12,7 @@ import config from '../../config-ts'
 // 输出目录
 const out = config.spriteOutPath
 // 图表目录
-const src = ['src/static/images/icon/*.png']
+const src = ['src/assets/images/icon/*.png']
 
 /**
  * 雪碧图
