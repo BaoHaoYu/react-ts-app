@@ -33,7 +33,7 @@ const webpackConfig: webpack.Configuration & { devServer: devserver.Configuratio
   resolve: {
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: path.join(config.rootPath, 'tsconfig-main.json')
+        configFile: path.join(config.rootPath, 'tsconfig-app.json')
       })
     ],
     ...resolve
