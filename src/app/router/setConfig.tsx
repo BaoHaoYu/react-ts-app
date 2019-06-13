@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Route, RouteProps } from 'react-router-dom'
-import asyncLoad, { IAsyncComponent } from '../components/page'
+import page, { IPageComponent } from '../components/page'
 
-export interface IRouteItem extends RouteProps,IAsyncComponent {
+export interface IRouteItem extends RouteProps,IPageComponent {
   /**
    * 子路由数据
    */
@@ -22,10 +22,10 @@ function setConfig (p: IRouteItem[]) {
     const _list: any[] = []
     deepChildren.map((item: IRouteItem) => {
       keyIndex = keyIndex + 1
-      const component = asyncLoad({
+      const component = page({
         componen: item.componen,
         children: item.children && _deep(item.children)
-      }) 
+      })
       _list.push(
         <Route
           path={item.path}

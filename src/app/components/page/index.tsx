@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export interface IAsyncComponent {
+export interface IPageComponent {
   /**
    * 加载函数或者页面组件
    */
@@ -14,7 +14,7 @@ export interface IAsyncComponent {
 /**
  * 页面组件
  */
-export default function page (p: IAsyncComponent) {
+export default function page (p: IPageComponent) {
   return function MyComponent (): any {
     const PageComponent = p.componen
     return (
