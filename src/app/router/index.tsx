@@ -8,15 +8,15 @@ import setConfig, { IRouteItem } from './setConfig'
 const config: IRouteItem[] = [
   {
     path: '/',
-    load: bundle.pageMain,
+    componen: bundle.pageMain,
     children: [
       {
         path: '/page1',
-        load: bundle.page1
+        componen: bundle.page1
       },
       {
         path: '/page2',
-        load: bundle.page2
+        componen: bundle.page2
       }
     ]
   }

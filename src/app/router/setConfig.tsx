@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Route, RouteProps } from 'react-router-dom'
-import asyncLoad, { IAsyncComponent } from '../components/async-page'
+import asyncLoad, { IAsyncComponent } from '../components/page'
 
 export interface IRouteItem extends RouteProps,IAsyncComponent {
   /**
@@ -22,10 +22,10 @@ function setConfig (p: IRouteItem[]) {
     const _list: any[] = []
     deepChildren.map((item: IRouteItem) => {
       keyIndex = keyIndex + 1
-      const component = item.load ? asyncLoad({
-        load: item.load,
+      const component = asyncLoad({
+        componen: item.componen,
         children: item.children && _deep(item.children)
-      }) : item.component
+      }) 
       _list.push(
         <Route
           path={item.path}

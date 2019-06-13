@@ -1,11 +1,9 @@
-export function pageMain () {
-  return import(/* webpackChunkName: "page-main" */'src/app/routes/page-main')
-}
+import pageMain from 'src/app/routes/page-main'
+import page1 from 'src/app/routes/page1'
+import page2 from 'src/app/routes/page2'
 
-export function page1 () {
-  return import(/* webpackChunkName: "page1" */'src/app/routes/page1')
-}
-
-export function page2 () {
-  return import(/* webpackChunkName: "page2" */'src/app/routes/page2')
+export {
+  pageMain,
+  page1,
+  page2
 }

@@ -1,7 +1,7 @@
 {
   "scripts": {
     "devSprites": "set NODE_ENV=development&& gulp sprites",
-    "devSrc": "set NODE_ENV=development&& webpack --config ./webpack-ts/webpack.src.config.ts",
+    "devSrc": "set NODE_ENV=development&& webpack --config ./webpack-ts/webpack.src.config.ts --watch",
     "devServer": "set NODE_ENV=development&& webpack-dev-server --config ./webpack-ts/webpack.server.config.ts --hot",
     "sprites": "set NODE_ENV=production&& gulp sprites",
     "src": "set NODE_ENV=production&& webpack --config ./webpack-ts/webpack.src.config.ts",
