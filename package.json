@@ -44,8 +44,8 @@
     "@types/redux-actions": "^2.3.0",
     "@types/tapable": "^1.0.4",
     "@types/uuid": "^3.4.4",
-    "@types/webpack": "^4.4.20",
-    "@types/webpack-dev-server": "^3.1.1",
+    "@types/webpack": "^4.4.33",
+    "@types/webpack-dev-server": "^3.1.6",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
     "babel-plugin-import": "^1.10.0",
@@ -91,11 +91,11 @@
     "tslint-react": "^3.6.0",
     "typescript": "^3.0.3",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "url-loader": "^1.1.1",
-    "webpack": "^4.20.2",
-    "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.9"
+    "url-loader": "^2.0.0",
+    "webpack": "^4.35.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "axios": "^0.18.0",
