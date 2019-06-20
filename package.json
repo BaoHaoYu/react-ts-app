@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "devSprites": "set NODE_ENV=development&& gulp sprites",
-    "devSrc": "set NODE_ENV=development&& webpack --config ./webpack-ts/webpack.src.config.ts",
-    "devServer": "set NODE_ENV=development&& webpack-dev-server --config ./webpack-ts/webpack.server.config.ts --hot",
+    "dev-sprites": "set NODE_ENV=development&& gulp sprites",
+    "dev-src": "set NODE_ENV=development&& webpack --config ./webpack-ts/webpack.src.config.ts",
+    "dev-server": "set NODE_ENV=development&& webpack-dev-server --config ./webpack-ts/webpack.server.config.ts --hot",
     "sprites": "set NODE_ENV=production&& gulp sprites",
     "src": "set NODE_ENV=production&& webpack --config ./webpack-ts/webpack.src.config.ts",
     "tslint": "tslint --fix src/**/*{.ts,.tsx}",
