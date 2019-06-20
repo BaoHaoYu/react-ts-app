@@ -1,5 +1,5 @@
 # 高效app脚手架
-`react@16.8.6` + `redux@4.0.0` + `react-router@4.3.1` + `immutable@3.8.1` + +`webpack@4.20.2` + `typescript@3.0.3` + `sass` 
+`react@16.8.6` + `redux@4.0.0` + `react-router@5.0.1` + `immutable@3.8.1` + +`webpack@4.20.2` + `typescript@3.0.3` + `sass` 
 
 <!-- toc -->
 - [高效app脚手架](#%E9%AB%98%E6%95%88app%E8%84%9A%E6%89%8B%E6%9E%B6)

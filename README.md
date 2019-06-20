@@ -1,6 +1,6 @@
 [中文版](./README_CN.md)
 
-`react@16.8.6` + `redux@4.0.0` + `react-router@4.3.1` + `immutable@3.8.1` + +`webpack@4.20.2` + `typescript@3.0.3` + `sass` 
+`react@16.8.6` + `redux@4.0.0` + `react-router@5.0.1` + `immutable@3.8.1` + +`webpack@4.20.2` + `typescript@3.0.3` + `sass` 
 
 <!-- toc -->
 - [Development Environment](#Development-Environment)
