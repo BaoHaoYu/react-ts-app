@@ -6,8 +6,10 @@
   ],
   "rules": {
     "object-literal-sort-keys": false,
-    "no-console": false
+    "no-console": false,
+    "prettier": true
   },
+  "rulesDirectory": ["tslint-plugin-prettier"],
   "exclude": [
     "node_modlues",
     "dist"
