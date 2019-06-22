@@ -9,7 +9,7 @@ export const PAGE_HASH = 'PAGE2'
 const REDUCER_KEY = 'homeReducer'
 
 const defaultData = fromJS({
-  server: {}
+  server: {},
 })
 
 const reducer = handleActions({}, defaultData)

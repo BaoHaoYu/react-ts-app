@@ -11,5 +11,5 @@ export default {
   // 是否生成环境
   isProduction,
   // 位置名称
-  branchPathName
+  branchPathName,
 }
