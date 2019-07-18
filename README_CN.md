@@ -1,26 +1,49 @@
-# 高效app脚手架
-`react@16.8.6` + `redux@4.0.0` + `react-router@5.0.1` + `immutable@3.8.1` + +`webpack@4.20.2` + `typescript@3.0.3` + `sass` 
+
+[English version](./README.md) 
 
 <!-- toc -->
-- [高效app脚手架](#%E9%AB%98%E6%95%88app%E8%84%9A%E6%89%8B%E6%9E%B6)
-  - [开发环境](#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
-  - [特性](#%E7%89%B9%E6%80%A7)
-  - [第一次运行项目](#%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE)
-  - [调试](#%E8%B0%83%E8%AF%95)
-  - [开发](#%E5%BC%80%E5%8F%91)
-  - [目录说明](#%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E)
-  - [修改css-loader](#%E4%BF%AE%E6%94%B9css-loader)
-  - [其他建议](#%E5%85%B6%E4%BB%96%E5%BB%BA%E8%AE%AE)
+- [主要内容](#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9)
+- [开发环境](#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
+- [markdown-toc](#markdown-toc)
+- [vocode 插件](#vocode-%E6%8F%92%E4%BB%B6)
+- [特性](#%E7%89%B9%E6%80%A7)
+- [第一次运行项目](#%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE)
+- [调试](#%E8%B0%83%E8%AF%95)
+- [开发](#%E5%BC%80%E5%8F%91)
+- [目录说明](#%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E)
+- [修改css-loader](#%E4%BF%AE%E6%94%B9css-loader)
+- [其他建议](#%E5%85%B6%E4%BB%96%E5%BB%BA%E8%AE%AE)
 <!-- tocstop -->
+ 
+## 主要内容
+- `react@16.8.6` 
+- `redux@4.0.0` 
+- `react-router@5.0.1` 
+- `immutable@3.8.1` 
+- `webpack@4.20.2`
+- `typescript@3.0.3` 
+- `sass` 
 
-- [English version](./README.md)  
 ## 开发环境
-- 操作系统：window 10
+- system：window 10
 - nodejs：10.15.0
 - npm：6.9.0
 - yarn：1.9.2
-- 开发工具：JetBrains WebStorm 2019.1.1 x64
-- 浏览器：chrome 74.0.3729.131 stable
+- vscode：1.36.1
+- chrome：74.0.3729.131 stable
+
+## [markdown-toc](https://github.com/jonschlinkert/markdown-toc)
+- `npm install markdown-toc -g` or `yarn global add markdown-toc`
+- `markdown-toc i README_CN.md`后可以自动在 `<!-- toc -->` 和 `<!-- tocstop -->`之间插入标题导航
+
+## vocode 插件
+- [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)：美丽的主题
+- [Easy Snippet Maker](https://marketplace.visualstudio.com/items?itemName=tariky.easy-snippet-maker)：快速生成代码块
+- [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)：git控件
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)：Markdown辅助编辑
+- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)：预览md为github样式
+- [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)：ts代码校验
+- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)：美丽的图表
 
 ## 特性
 - immutablejs
