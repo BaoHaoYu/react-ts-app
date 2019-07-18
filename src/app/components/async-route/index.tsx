@@ -7,7 +7,9 @@ interface IAsyncRouteProps {
 }
 
 @dispatch
-class AsyncRoute extends React.Component<IAsyncRouteProps & IDispatchProps & RouteProps> {
+class AsyncRoute extends React.Component<
+  IAsyncRouteProps & IDispatchProps & RouteProps
+> {
   public static displayName?: string = ''
   public state: { Component?: any } = {
     Component: undefined
@@ -26,27 +28,25 @@ class AsyncRoute extends React.Component<IAsyncRouteProps & IDispatchProps & Rou
 
   public renderRoute = () => {
     const { Component } = this.state
-    return (
-        <Component>
-          {this.props.children}
-        </Component>
-    )
+    return <Component>{this.props.children}</Component>
   }
 
   public render () {
     const { Component } = this.state
-    if (!Component) return ''
+    if (!Component) {
+      return ''
+    }
     return (
-        <Route
-            sensitive={this.props.sensitive}
-            location={this.props.location}
-            strict={this.props.strict}
-            exact={this.props.exact}
-            path={this.props.path}
-            render={this.renderRoute}
-        />
+      <Route
+        sensitive={this.props.sensitive}
+        location={this.props.location}
+        strict={this.props.strict}
+        exact={this.props.exact}
+        path={this.props.path}
+        render={this.renderRoute}
+      />
     )
   }
 }
 
-export default (AsyncRoute as React.ComponentClass<IAsyncRouteProps & RouteProps>)
+export default AsyncRoute as React.ComponentClass<IAsyncRouteProps & RouteProps>

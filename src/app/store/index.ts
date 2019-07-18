@@ -12,7 +12,10 @@ let compose1: any
 // @ts-ignore
 if (window.__REDUX_DEVTOOLS_EXTENSION__) {
   // @ts-ignore
-  compose1 = compose(applyMiddleware(...middle, routerMiddleware(history)), window.__REDUX_DEVTOOLS_EXTENSION__())
+  compose1 = compose(
+    applyMiddleware(...middle, routerMiddleware(history)),
+    window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 } else {
   compose1 = compose(applyMiddleware(...middle, routerMiddleware(history)))
 }
@@ -22,9 +25,9 @@ let storeObj = {
 }
 
 const store = createStore(
-    connectRouter(history)(combineReducers(storeObj)),
-    {},
-    compose1
+  connectRouter(history)(combineReducers(storeObj)),
+  {},
+  compose1
 )
 
 function addReducers (obj: any) {
@@ -32,9 +35,6 @@ function addReducers (obj: any) {
   store.replaceReducer(combineReducers({ ...storeObj, ...obj }))
 }
 
-export {
-  addReducers,
-  history
-}
+export { addReducers, history }
 
 export default store

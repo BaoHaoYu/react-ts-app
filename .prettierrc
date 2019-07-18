@@ -1,0 +1,25 @@
+{
+  "trailingComma": "es5",
+  "printWidth": 80,
+
+  "parser": "typescript",
+  "semi": false,
+  "arrowParens": "always",
+  "useTabs": false,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "overrides": [{
+    "files": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "webpack-ts/**/*.ts",
+      "!**/dist",
+    ],
+    "parser": "babylon",
+    "options": {
+      "trailingComma": "all"
+    }
+  }]
+}

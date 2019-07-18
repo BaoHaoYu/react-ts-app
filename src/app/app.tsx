@@ -7,9 +7,9 @@ import store from './store'
 class App extends React.Component<any> {
   public render () {
     return (
-        <Provider store={store}>
-            <Router/>
-        </Provider>
+      <Provider store={store}>
+        <Router />
+      </Provider>
     )
   }
 }

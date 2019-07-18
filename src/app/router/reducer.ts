@@ -9,11 +9,17 @@ interface IPayload {
   }
 }
 
-export default handleActions({
-  ['@@router/LOCATION_CHANGE']: (state: any, action: { payload?: IPayload }) => {
-    return { ...state, ...action.payload }
+export default handleActions(
+  {
+    ['@@router/LOCATION_CHANGE']: (
+      state: any,
+      action: { payload?: IPayload }
+    ) => {
+      return { ...state, ...action.payload }
+    }
+  },
+  {
+    location: {},
+    action: ''
   }
-}, {
-  location: {},
-  action: ''
-})
+)

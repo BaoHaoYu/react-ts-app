@@ -3,11 +3,7 @@ import { connect } from 'react-redux'
 
 class Page2 extends React.Component<{ dispatch: any }> {
   public render () {
-    return (
-        <div>
-          this is page2
-        </div>
-    )
+    return <div>this is page2</div>
   }
 }
 
@@ -21,4 +17,7 @@ function mapDispatchToProps (dispatch: any) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page2)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Page2)
