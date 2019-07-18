@@ -8,8 +8,10 @@
     "object-literal-sort-keys": false,
     "no-console": false
   },
-  "exclude": [
-    "node_modlues",
-    "dist"
-  ]
+  "linterOptions": {
+    "exclude": [
+      "node_modlues",
+      "dist"
+    ]
+  }
 }
