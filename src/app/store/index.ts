@@ -11,9 +11,9 @@ const history = createHashHistory()
 let compose1: any
 // @ts-ignore
 if (window.__REDUX_DEVTOOLS_EXTENSION__) {
-  // @ts-ignore
   compose1 = compose(
     applyMiddleware(...middle, routerMiddleware(history)),
+    // @ts-ignore
     window.__REDUX_DEVTOOLS_EXTENSION__(),
   )
 } else {
