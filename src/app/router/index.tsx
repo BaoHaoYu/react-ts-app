@@ -12,17 +12,17 @@ const config: IRouteItem[] = [
     children: [
       {
         path: '/page1',
-        load: bundle.page1
+        load: bundle.page1,
       },
       {
         path: '/page2',
-        load: bundle.page2
-      }
-    ]
-  }
+        load: bundle.page2,
+      },
+    ],
+  },
 ]
 
-function RouteConfig () {
+function RouteConfig() {
   const router = setConfig(config)
   return (
     <ConnectedRouter history={history}>

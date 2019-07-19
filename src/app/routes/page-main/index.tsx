@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import s from './style/index.scss'
 
 class PageMain extends React.Component<any> {
-  public render () {
+  public render() {
     return (
       <div className={cn(s.main)}>
         <p className={cn(s.main__title)}>pageMain</p>
@@ -24,17 +24,17 @@ class PageMain extends React.Component<any> {
   }
 }
 
-function mapStateToProps () {
+function mapStateToProps() {
   return {}
 }
 
-function mapDispatchToProps (dispatch: any) {
+function mapDispatchToProps(dispatch: any) {
   return {
-    dispatch
+    dispatch,
   }
 }
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(PageMain)

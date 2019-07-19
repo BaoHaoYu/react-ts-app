@@ -13,13 +13,13 @@ export default handleActions(
   {
     ['@@router/LOCATION_CHANGE']: (
       state: any,
-      action: { payload?: IPayload }
+      action: { payload?: IPayload },
     ) => {
       return { ...state, ...action.payload }
-    }
+    },
   },
   {
     location: {},
-    action: ''
-  }
+    action: '',
+  },
 )

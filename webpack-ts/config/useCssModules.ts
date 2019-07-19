@@ -7,11 +7,13 @@ import webpack from 'webpack'
  * @return {*[]}
  * @param p
  */
-export default function cssModules (p: { loader: string, sourceMap: boolean }):
-    webpack.RuleSetUse {
+export default function cssModules(p: {
+  loader: string
+  sourceMap: boolean
+}): webpack.RuleSetUse {
   return [
     {
-      loader: 'style-loader'
+      loader: 'style-loader',
     },
     {
       loader: 'css-loader',
@@ -19,25 +21,23 @@ export default function cssModules (p: { loader: string, sourceMap: boolean }):
         modules: true,
         sourceMap: p.sourceMap,
         importLoaders: 1,
-        localIdentName: '[local]__[hash:base64:5]'
-      } as ICssLoaderOpts
+        localIdentName: '[local]__[hash:base64:5]',
+      } as ICssLoaderOpts,
     },
     {
       loader: 'postcss-loader',
       options: {
         sourceMap: p.sourceMap,
-        plugins () {
-          return [
-            precss
-          ]
-        }
-      }
+        plugins() {
+          return [precss]
+        },
+      },
     },
     {
       loader: p.loader,
       options: {
-        sourceMap: p.sourceMap
-      }
-    }
+        sourceMap: p.sourceMap,
+      },
+    },
   ]
 }

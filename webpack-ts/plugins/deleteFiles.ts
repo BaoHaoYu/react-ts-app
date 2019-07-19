@@ -14,11 +14,11 @@ export default class DeleteFiles implements Tapable.Plugin {
     path: string
   }
 
-  constructor (opts: IOpts) {
+  constructor(opts: IOpts) {
     this.opts = opts
   }
 
-  public apply (compiler: webpack.Compiler): void {
+  public apply(compiler: webpack.Compiler): void {
     compiler.hooks.compile.tap('deleteFiles compile', () => {
       fs.emptyDir(this.opts.path)
     })

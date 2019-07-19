@@ -5,7 +5,7 @@ import Router from './router'
 import store from './store'
 
 class App extends React.Component<any> {
-  public render () {
+  public render() {
     return (
       <Provider store={store}>
         <Router />

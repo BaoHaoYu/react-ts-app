@@ -9,24 +9,24 @@ import rules from './config/rules'
 
 const webpackConfig: webpack.Configuration = {
   entry: {
-    main: ['./src/app/index.tsx']
+    main: ['./src/app/index.tsx'],
   },
   mode: config.isProduction ? 'production' : 'development',
   resolve: {
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: config.tsconfigPath
-      })
+        configFile: config.tsconfigPath,
+      }),
     ],
-    ...resolve
+    ...resolve,
   },
   output,
   devtool: false,
   module: {
-    rules: rules(true)
+    rules: rules(true),
   },
   optimization,
-  plugins
+  plugins,
 }
 
 export default webpackConfig

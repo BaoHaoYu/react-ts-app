@@ -9,7 +9,7 @@ const REDUCER_KEY = 'pageMainReducer'
 const GET_DATA = 'GET_DATA' + PAGE_HASH
 
 const defaultData = fromJS({
-  server: {}
+  server: {},
 })
 
 export const getData = () => (dispatch: any, getState: any) => {

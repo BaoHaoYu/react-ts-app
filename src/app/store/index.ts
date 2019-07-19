@@ -14,23 +14,23 @@ if (window.__REDUX_DEVTOOLS_EXTENSION__) {
   // @ts-ignore
   compose1 = compose(
     applyMiddleware(...middle, routerMiddleware(history)),
-    window.__REDUX_DEVTOOLS_EXTENSION__()
+    window.__REDUX_DEVTOOLS_EXTENSION__(),
   )
 } else {
   compose1 = compose(applyMiddleware(...middle, routerMiddleware(history)))
 }
 
 let storeObj = {
-  router: reducer
+  router: reducer,
 }
 
 const store = createStore(
   connectRouter(history)(combineReducers(storeObj)),
   {},
-  compose1
+  compose1,
 )
 
-function addReducers (obj: any) {
+function addReducers(obj: any) {
   storeObj = { ...storeObj, ...obj }
   store.replaceReducer(combineReducers({ ...storeObj, ...obj }))
 }

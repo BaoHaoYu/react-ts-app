@@ -1,5 +1,5 @@
 const log = (p: { dispatch: any; getState: any }) => (next: any) => (
-  action: any
+  action: any,
 ) => {
   if (process.env.NODE_ENV !== 'production') {
     // @ts-ignore

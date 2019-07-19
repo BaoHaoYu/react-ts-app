@@ -12,10 +12,10 @@ class AsyncRoute extends React.Component<
 > {
   public static displayName?: string = ''
   public state: { Component?: any } = {
-    Component: undefined
+    Component: undefined,
   }
 
-  public async componentWillMount () {
+  public async componentWillMount() {
     const { Component } = this.state
     if (!Component) {
       const PageComponent = await this.props.load()
@@ -31,7 +31,7 @@ class AsyncRoute extends React.Component<
     return <Component>{this.props.children}</Component>
   }
 
-  public render () {
+  public render() {
     const { Component } = this.state
     if (!Component) {
       return ''

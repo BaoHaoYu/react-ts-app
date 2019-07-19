@@ -9,9 +9,11 @@ import plugins from './config/plugins'
 import resolve from './config/resolve'
 import rules from './config/rules'
 
-const webpackConfig: webpack.Configuration & { devServer: devserver.Configuration } = {
+const webpackConfig: webpack.Configuration & {
+  devServer: devserver.Configuration
+} = {
   entry: {
-    main: ['./src/app/index']
+    main: ['./src/app/index'],
   },
 
   devServer: {
@@ -25,7 +27,7 @@ const webpackConfig: webpack.Configuration & { devServer: devserver.Configuratio
     port: config.port,
 
     // 域名
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   },
   output,
   devtool: false,
@@ -33,16 +35,16 @@ const webpackConfig: webpack.Configuration & { devServer: devserver.Configuratio
   resolve: {
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: path.join(config.rootPath, 'tsconfig-app.json')
-      })
+        configFile: path.join(config.rootPath, 'tsconfig-app.json'),
+      }),
     ],
-    ...resolve
+    ...resolve,
   },
   module: {
-    rules: rules(true)
+    rules: rules(true),
   },
   optimization,
-  plugins
+  plugins,
 }
 
 export default webpackConfig

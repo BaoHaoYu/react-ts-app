@@ -20,8 +20,8 @@ export interface IAsyncComponent {
  * 异步加载页面组件
  * @param {IAsyncComponent} p
  */
-export default function asyncPage (p: IAsyncComponent) {
-  return function MyComponent (): any {
+export default function asyncPage(p: IAsyncComponent) {
+  return function MyComponent(): any {
     const PageComponent = React.lazy(p.load as loadAsync)
     return (
       <React.Suspense fallback={<div>Loading...</div>}>

@@ -9,15 +9,17 @@ const output: webpack.Output = {
   path: config.srcPath,
 
   // 单个chunk文件名
-  chunkFilename: config.addHashToFile ? '[id].[chunkhash:8].chunk.js' : '[id].chunk.js',
+  chunkFilename: config.addHashToFile
+    ? '[id].[chunkhash:8].chunk.js'
+    : '[id].chunk.js',
 
   // chunks 目录
   publicPath: config.outPublicPath,
 
   // 配置sourceMap
-  devtoolModuleFilenameTemplate (info) {
+  devtoolModuleFilenameTemplate(info) {
     return 'file:///' + info.absoluteResourcePath.replace(/\\/g, '/')
-  }
+  },
 }
 
 export default output
