@@ -2,17 +2,16 @@
 [English version](./README.md) 
 
 <!-- toc -->
-- [主要内容](#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9)
-- [开发环境](#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
+- [主要内容](#%e4%b8%bb%e8%a6%81%e5%86%85%e5%ae%b9)
+- [开发环境](#%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83)
 - [markdown-toc](#markdown-toc)
-- [vocode 插件](#vocode-%E6%8F%92%E4%BB%B6)
-- [特性](#%E7%89%B9%E6%80%A7)
-- [第一次运行项目](#%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE)
-- [调试](#%E8%B0%83%E8%AF%95)
-- [开发](#%E5%BC%80%E5%8F%91)
-- [目录说明](#%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E)
-- [修改css-loader](#%E4%BF%AE%E6%94%B9css-loader)
-- [其他建议](#%E5%85%B6%E4%BB%96%E5%BB%BA%E8%AE%AE)
+- [特性](#%e7%89%b9%e6%80%a7)
+- [第一次运行项目](#%e7%ac%ac%e4%b8%80%e6%ac%a1%e8%bf%90%e8%a1%8c%e9%a1%b9%e7%9b%ae)
+- [调试](#%e8%b0%83%e8%af%95)
+- [开发](#%e5%bc%80%e5%8f%91)
+- [目录说明](#%e7%9b%ae%e5%bd%95%e8%af%b4%e6%98%8e)
+- [修改css-loader](#%e4%bf%ae%e6%94%b9css-loader)
+- [其他建议](#%e5%85%b6%e4%bb%96%e5%bb%ba%e8%ae%ae)
 <!-- tocstop -->
  
 ## 主要内容
@@ -25,25 +24,14 @@
 - `sass` 
 
 ## 开发环境
-- system：window 10
 - nodejs：10.15.0
 - npm：6.9.0
 - yarn：1.9.2
 - vscode：1.36.1
-- chrome：74.0.3729.131 stable
 
 ## [markdown-toc](https://github.com/jonschlinkert/markdown-toc)
 - `npm install markdown-toc -g` or `yarn global add markdown-toc`
 - `markdown-toc i README_CN.md`后可以自动在 `<!-- toc -->` 和 `<!-- tocstop -->`之间插入标题导航
-
-## vocode 插件
-- [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)：美丽的主题
-- [Easy Snippet Maker](https://marketplace.visualstudio.com/items?itemName=tariky.easy-snippet-maker)：快速生成代码块
-- [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)：git控件
-- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)：Markdown辅助编辑
-- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)：预览md为github样式
-- [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)：ts代码校验
-- [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)：美丽的图表
 
 ## 特性
 - immutablejs

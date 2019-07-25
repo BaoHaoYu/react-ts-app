@@ -3,23 +3,21 @@
 `react@16.8.6` + `redux@4.0.0` + `react-router@5.0.1` + `immutable@3.8.1` + +`webpack@4.20.2` + `typescript@3.0.3` + `sass` 
 
 <!-- toc -->
-- [Development Environment](#Development-Environment)
-- [Feature](#Feature)
-- [Running the project for the first time](#Running-the-project-for-the-first-time)
-- [Debugging](#Debugging)
-- [Development](#Development)
-- [Directory Description](#Directory-Description)
-- [Modify css-loader](#Modify-css-loader)
-- [Other suggestion](#Other-suggestion)
+- [Development Environment](#development-environment)
+- [Feature](#feature)
+- [Running the project for the first time](#running-the-project-for-the-first-time)
+- [Debugging](#debugging)
+- [Development](#development)
+- [Directory Description](#directory-description)
+- [Modify css-loader](#modify-css-loader)
+- [Other suggestion](#other-suggestion)
 <!-- tocstop -->
 
 ## Development Environment
-- Operating system: window 10
-- nodejs: 10.15.0
-- npm: 6.9.0
-- yarn: 1.9.2
-- Development Tools: JetBrains WebStorm 2019.1.1 x64
-- Browser: chrome 74.0.3729.131 stable
+- nodejs：10.15.0
+- npm：6.9.0
+- yarn：1.9.2
+- vscode：1.36.1
 
 ## Feature
 - immutablejs
@@ -81,4 +79,4 @@ Modify the location css by chrome, then modify the file, this modification will 
 ![](__resource__/sass.gif)
 
 ## Other suggestion
-1.css use BEM specification, see https://seesparkbox.com/foundry/bem_by_example
+1.css use BEM specification, [reference](https://seesparkbox.com/foundry/bem_by_example)
