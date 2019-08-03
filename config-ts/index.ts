@@ -61,7 +61,7 @@ const twigPath = './src/' + twigName
 const htmlTitile = ''
 
 // 不变：tsconfig文件路径
-const tsconfigPath = path.join(rootPath, 'tsconfig-app.json')
+const tsconfigPath = path.join(rootPath, 'tsconfig.app.json')
 
 export default {
   addHashToFile,
