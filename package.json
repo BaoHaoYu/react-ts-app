@@ -8,11 +8,6 @@
     "tslint": "tslint --fix src/**/*{.ts,.tsx} gulp-ts/**/*.ts webpack-ts/**/*.ts webpack-ts/*.ts config/*.ts",
     "stylelint": "stylelint --fix src/**/*.scss"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -117,5 +112,104 @@
     "redux-devtools": "^3.4.1",
     "redux-router": "^2.1.2",
     "redux-thunk": "^2.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel":{
+    "presets": [
+      [
+        "@babel/preset-env"
+      ],
+      "@babel/preset-typescript",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ],
+      [
+        "@babel/plugin-syntax-dynamic-import"
+      ],
+      "react-hot-loader/babel"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "parser": "typescript",
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "overrides": [{
+      "files": [
+        "!**/dist",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "webpack-ts/**/*.ts"
+      ],
+      "options": {
+        "trailingComma": "all"
+      }
+    }]
+  },
+  "lint-staged": {
+    "linters": {
+      "config-ts/**/*{.ts,.tsx}": "tslint --fix",
+      "gulp-ts/**/*{.ts,.tsx}": "tslint --fix",
+      "webpack-ts/*.ts": "tslint --fix",
+      "src/**/*{.ts,.tsx}": "tslint --fix",
+      "src/**/*.scss": "stylelint --fix"
+    },
+    "ignore": ["**/dist/*.{ts,tsx}"]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "rules": {
+      "declaration-block-trailing-semicolon": null,
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "function",
+            "if",
+            "each",
+            "include",
+            "mixin"
+          ]
+        }
+      ],
+      "scss/at-rule-no-unknown": true
+    }
   }
 }
