@@ -1,13 +1,13 @@
 .mysp {display:inline-block;}
-.mysp:before {content:''; float:left;}
+.mysp:before {content:''; float:left;background-image: url({{ url }})}
 {%- for sprite in sprites %}
-.mysp-{{ sprite.name }}{
-    width: {{ sprite.px.width }};
-    height: {{ sprite.px.height }};
-}
-.mysp-{{sprite.name}}:before {
-    background: url({{ url }}/{{ sprite.escaped_image }}) {{ sprite.px.offset_x }} {{ sprite.px.offset_y }};
-    width: {{ sprite.px.width }};
-    height: {{ sprite.px.height }};
-}
+    .mysp-{{ sprite.name }}{
+        width: {{ sprite.px.width }};
+        height: {{ sprite.px.height }};
+    }
+    .mysp-{{sprite.name}}:before {
+        background-position: {{ sprite.px.offset_x }} {{ sprite.px.offset_y }};
+        width: {{ sprite.px.width }};
+        height: {{ sprite.px.height }};
+    }
 {%- endfor %}

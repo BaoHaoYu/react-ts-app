@@ -23,9 +23,10 @@ const sprite: gulp.TaskFunction = () => {
 
   // 清空目录
   fse.emptyDirSync(config.spriteOutPath)
+  const imgName = config.addHashToFile ? `sprite.${hash}.png` : 'sprite.png'
   const spriteData = gulp.src(src).pipe(
     spritesmith({
-      imgName: config.addHashToFile ? `sprite.${hash}.png` : 'sprite.png',
+      imgName,
       cssName: config.addHashToFile ? `sprite.${hash}.css` : 'sprite.css',
       url: config.loadSpritePath,
       cssTemplate: (spritesData) => {
@@ -36,7 +37,7 @@ const sprite: gulp.TaskFunction = () => {
         )
         return nunjucks.renderString(twig, {
           sprites: spritesData.sprites,
-          url: config.loadSpritePath,
+          url: config.loadSpritePath + '/' + imgName,
         })
       },
     }),
