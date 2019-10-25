@@ -29,8 +29,8 @@ export default _.compact([
     loadSpritePath: config.loadSpritePath,
     htmlName: 'index.html',
   }),
-  // @ts-ignore
   !config.isProduction &&
+    // @ts-ignore
     new webpack.SourceMapDevToolPlugin({
       filename: '[file].map',
       moduleFilenameTemplate(info: any) {

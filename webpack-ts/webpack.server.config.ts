@@ -27,7 +27,7 @@ const webpackConfig: webpack.Configuration & {
     port: config.port,
 
     // 域名
-    host: '0.0.0.0',
+    host: 'localhost',
   },
   output,
   devtool: false,

@@ -18,10 +18,12 @@ export default function cssModules(p: {
     {
       loader: 'css-loader',
       options: {
-        modules: true,
+        modules: {
+          mode: 'local',
+          localIdentName: '[local]__[hash:base64:5]',
+        },
         sourceMap: p.sourceMap,
         importLoaders: 1,
-        localIdentName: '[local]__[hash:base64:5]',
       } as ICssLoaderOpts,
     },
     {
