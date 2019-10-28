@@ -5,7 +5,7 @@
     "dev-server": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack-ts/webpack.server.config.ts --hot",
     "sprites": "cross-env NODE_ENV=production gulp sprites",
     "src": "cross-env NODE_ENV=production webpack --config ./webpack-ts/webpack.src.config.ts",
-    "tslint": "tslint --fix src/**/*{.ts,.tsx} gulp-ts/**/*.ts webpack-ts/**/*.ts webpack-ts/*.ts config/*.ts",
+    "tslint": "tslint --fix -p tsconfig.json",
     "stylelint": "stylelint --fix src/**/*.scss"
   },
   "devDependencies": {

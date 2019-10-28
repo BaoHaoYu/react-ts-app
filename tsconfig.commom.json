@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "downlevelIteration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -8,26 +9,32 @@
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
-    "noEmitHelpers": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
+    "strict": true,
     "noUnusedLocals": false,
     "sourceMap": true,
-    "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ],
     "lib": [
       "dom",
+      "dom.iterable",
       "es2015.collection",
       "es2015.iterable",
       "es2015.promise",
       "es5"
     ]
   },
+  "include": [
+    "gulpfile.ts",
+    "src",
+    "webpack-ts",
+    "webpack-ts",
+    "config-ts"
+  ],
   "exclude": [
-    "build",
-    "dist",
     "node_modules"
   ]
 }

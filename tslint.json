@@ -14,8 +14,8 @@
   "rulesDirectory": ["tslint-plugin-prettier"],
   "linterOptions": {
     "exclude": [
-      "**/node_modules/**",
-      "dist"
+      "node_modules",
+      "__build__"
     ]
   }
 }
