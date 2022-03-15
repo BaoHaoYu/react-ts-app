@@ -4711,9 +4711,9 @@ jpeg-js@0.0.4:
   version "0.0.4"
   resolved "https://registry.npm.taobao.org/jpeg-js/download/jpeg-js-0.0.4.tgz#06aaf47efec7af0b1924a59cd695a6d2b5ed870e"
 
-jpeg-js@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.npm.taobao.org/jpeg-js/download/jpeg-js-0.4.0.tgz#6fbd6cd0e49627c5a0341796c9e50c70a2aa3673"
+jpeg-js@^0.3.2:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.7.tgz#471a89d06011640592d314158608690172b1028d"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.5.1"
@@ -5013,9 +5013,9 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
 
 lodash._basecopy@^3.0.0:
   version "3.0.1"

@@ -106,7 +106,7 @@
     "connected-react-router": "^4.5.0",
     "history": "^4.7.2",
     "immutable": "^3.8.1",
-    "lodash-es": "^4.17.11",
+    "lodash-es": "^4.17.21",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^5.0.6",
